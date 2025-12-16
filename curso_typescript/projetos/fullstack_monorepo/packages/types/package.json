@@ -1,0 +1,14 @@
+{
+  "name": "types",
+  "version": "1.0.0",
+  "main": "User.ts",
+  "types": "User.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "csstype": "^3.2.3",
+    "mime": "^1.6.0",
+    "undici-types": "^6.21.0"
+  }
+}

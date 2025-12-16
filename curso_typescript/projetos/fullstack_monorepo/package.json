@@ -1,0 +1,9 @@
+{
+  "name": "fullstack_monorepo",
+  "private": true,
+  "workspaces": [
+    "packages/types",
+    "packages/api",
+    "packages/web"
+  ]
+}
