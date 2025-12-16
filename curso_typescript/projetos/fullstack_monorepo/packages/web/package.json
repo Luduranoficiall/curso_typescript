@@ -9,10 +9,21 @@
   "devDependencies": {
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "prettier": "^3.7.4",
     "typescript": "^5.3.3"
   },
   "scripts": {
     "start": "npx serve -s build",
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "format": "prettier --write ./src",
+    "test": "echo 'Sem testes automatizados ainda'"
   }
 }

@@ -39,6 +39,23 @@ Este pacote é o frontend React do exemplo fullstack monorepo.
    npm start
    ```
 
+## Testes e Lint
+- Para checar o lint:
+   ```bash
+   npm run lint
+   ```
+- Para formatar o código:
+   ```bash
+   npm run format
+   ```
+- Para rodar testes (placeholder):
+   ```bash
+   npm test
+   ```
+
+## Exemplo de uso
+Adicione um usuário pelo formulário. O frontend consome a API e exibe a lista em tempo real.
+
 ## Observações
 - Certifique-se de que a API está rodando para consumir os dados.
 - O frontend utiliza os tipos TypeScript compartilhados para máxima segurança de tipos.
