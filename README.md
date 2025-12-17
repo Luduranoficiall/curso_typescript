@@ -46,12 +46,24 @@ Esta aplicação e curso vão além do básico: você terá criptografia ponta-a
 - Lint, Prettier, Husky, lint-staged, commitlint
 - CI/CD com GitHub Actions e deploy automatizado
 
+
 ## Exemplos Avançados e Padrões de Projeto
 
+- [Exemplo JWT seguro com TypeScript e Express](./EXEMPLOS_AVANCADOS.md)
+- [Logger estruturado com Winston](./EXEMPLOS_LOGS.md)
+- [Repository Pattern com TypeScript](./EXEMPLO_REPOSITORY_PATTERN.md)
 - Factory, Singleton, Observer, Adapter, Strategy (exemplos práticos)
-- Autenticação JWT com refresh token seguro
-- Logs auditáveis e rastreáveis
 - API RESTful e integração frontend-backend
+
+## Otimizações de Performance
+
+- [Otimizações de API Express](./OTIMIZACOES_API.md)
+- [Otimizações de React Web](./OTIMIZACOES_WEB.md)
+
+## Desafios de Especialista
+
+- [Desafios práticos e exercícios avançados](./DESAFIOS_ESPECIALISTA.md)
+
 
 ## Desafios de Especialista
 
