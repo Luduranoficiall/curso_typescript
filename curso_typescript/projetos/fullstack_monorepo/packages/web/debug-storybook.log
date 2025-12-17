@@ -1,0 +1,24 @@
+[05:12:07.436] [INFO] storybook v10.1.9
+[05:12:08.119] [DEBUG] Getting package.json info for /workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/packages/web/package.json...
+[05:12:10.576] [INFO] Starting...
+[05:12:11.181] [DEBUG] Starting preview..
+[05:12:11.255] [INFO] Addon-docs: using MDX3
+[05:12:11.344] [INFO] Using implicit CSS loaders
+[05:12:11.360] [INFO] Using default Webpack5 setup
+[05:12:12.881] [DEBUG] Using tsconfig paths for react-docgen
+[05:12:17.215] [ERROR] Failed to build the preview
+[05:12:17.216] [WARN] Force closed preview build
+[05:12:17.218] [ERROR] [38;2;241;97;97mSB_BUILDER-WEBPACK5_0003 (WebpackCompilationError): There were problems when compiling your code with Webpack.
+Run Storybook with --debug-webpack for more information.[39m
+    at starter (file:///workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/node_modules/@storybook/builder-webpack5/dist/index.js:799:11)
+    at starter.next (<anonymous>)
+    at Module.start (file:///workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/node_modules/@storybook/builder-webpack5/dist/index.js:857:34)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async storybookDevServer (file:///workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/node_modules/storybook/dist/core-server/index.js:6806:82)
+    at async buildOrThrow (file:///workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/node_modules/storybook/dist/core-server/index.js:5555:12)
+    at async buildDevStandalone (file:///workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/node_modules/storybook/dist/core-server/index.js:7208:66)
+    at async withTelemetry (file:///workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/node_modules/storybook/dist/_node-chunks/chunk-3Q5I3QYJ.js:209:12)
+    at async dev (file:///workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/node_modules/storybook/dist/bin/core.js:2734:3)
+    at async _Command.<anonymous> (file:///workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/node_modules/storybook/dist/bin/core.js:2801:92)
+[05:12:17.221] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.

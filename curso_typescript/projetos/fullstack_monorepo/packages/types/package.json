@@ -4,7 +4,10 @@
   "main": "User.ts",
   "types": "User.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "lint": "eslint ./ --ext .ts",
+    "format": "prettier --write ./",
+    "test": "echo 'Sem testes automatizados ainda'"
   },
   "devDependencies": {
     "csstype": "^3.2.3",

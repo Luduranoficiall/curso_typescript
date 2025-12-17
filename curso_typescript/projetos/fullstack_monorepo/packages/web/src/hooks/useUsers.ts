@@ -10,11 +10,19 @@ export function useUsers() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    fetch('http://localhost:4000/api/users')
-      .then(res => res.json())
-      .then(setUsers)
-      .finally(() => setLoading(false));
+    const fetchUsers = async () => {
+      setLoading(true);
+      try {
+        const res = await fetch('http://localhost:4000/api/users');
+        const data = (await res.json()) as User[];
+        setUsers(data);
+      } catch {
+        setErro('Erro ao carregar usuários.');
+      } finally {
+        setLoading(false);
+      }
+    };
+    void fetchUsers();
   }, []);
 
   const validarEmail = (email: string) => {
@@ -38,7 +46,7 @@ export function useUsers() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ nome, email })
     });
-    const novo = await res.json();
+    const novo = (await res.json()) as User;
     setUsers([...users, novo]);
     setNome('');
     setEmail('');

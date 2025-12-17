@@ -35,6 +35,26 @@ Este pacote é a API Node.js/Express do exemplo fullstack monorepo.
    npm start
    ```
 
+## Testes e Lint
+- Para checar o lint:
+   ```bash
+   npm run lint
+   ```
+- Para formatar o código:
+   ```bash
+   npm run format
+   ```
+- Para rodar testes (placeholder):
+   ```bash
+   npm test
+   ```
+
+## Exemplo de uso (API)
+```bash
+curl -X POST http://localhost:4000/api/users -H 'Content-Type: application/json' -d '{"nome":"Maria","email":"maria@email.com"}'
+curl http://localhost:4000/api/users
+```
+
 ## Observações
 - A API utiliza os tipos TypeScript compartilhados para máxima segurança de tipos.
 - O frontend consome esta API.

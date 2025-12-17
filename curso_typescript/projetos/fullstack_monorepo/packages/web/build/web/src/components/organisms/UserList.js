@@ -1,0 +1,2 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+export const UserList = ({ users }) => (_jsx("ul", { "aria-live": "polite", children: users.map(u => (_jsxs("li", { style: { background: '#f8f8f8', margin: '4px 0', padding: 4, borderRadius: 4 }, children: [_jsx("span", { "aria-label": `Usuário: ${u.nome}`, children: u.nome }), " (", _jsx("span", { "aria-label": `Email: ${u.email}`, children: u.email }), ")"] }, u.id))) }));

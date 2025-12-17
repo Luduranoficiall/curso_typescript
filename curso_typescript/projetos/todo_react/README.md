@@ -19,10 +19,27 @@ Este projeto é um exemplo prático de uma aplicação de lista de tarefas (Todo
 
 ## Estrutura
 - src/
-  - App.tsx
-  - components/TodoList.tsx
-  - components/TodoForm.tsx
-  - types/Todo.ts
+   - App.tsx
+   - components/TodoList.tsx
+   - components/TodoForm.tsx
+   - types/Todo.ts
+
+## Testes e Lint
+- Para checar o lint:
+   ```bash
+   npm run lint
+   ```
+- Para formatar o código:
+   ```bash
+   npm run format
+   ```
+- Para rodar testes (placeholder):
+   ```bash
+   npm test
+   ```
+
+## Exemplo de uso
+Adicione uma tarefa, marque como concluída e remova pelo botão. O estado é salvo no localStorage.
 
 ---
 Veja o código nos arquivos da pasta `src`.

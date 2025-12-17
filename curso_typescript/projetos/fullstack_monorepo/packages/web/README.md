@@ -1,4 +1,10 @@
+
+
 # Web (React) - Fullstack Monorepo
+
+🚀 Este curso vai do básico ao especialista em TypeScript, React e desenvolvimento fullstack moderno. Ideal para quem quer dominar do zero ao avançado!
+
+![Cobertura de Testes](./coverage/badge.svg)
 
 Este pacote é o frontend React do exemplo fullstack monorepo.
 

@@ -4,7 +4,10 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node-dev src/index.ts"
+    "dev": "ts-node-dev src/index.ts",
+    "lint": "eslint ./src --ext .ts",
+    "format": "prettier --write ./src",
+    "test": "echo 'Sem testes automatizados ainda'"
   },
   "dependencies": {
     "cors": "^2.8.5",

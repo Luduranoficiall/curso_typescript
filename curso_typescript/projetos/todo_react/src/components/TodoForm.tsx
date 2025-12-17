@@ -14,15 +14,19 @@ const TodoForm: React.FC<Props> = ({ adicionarTodo }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: 'flex', gap: 8 }}>
+    <form onSubmit={handleSubmit} style={{ display: 'flex', gap: 8 }} aria-label="Adicionar nova tarefa">
+      <label htmlFor="nova-tarefa" style={{ display: 'none' }}>Nova tarefa</label>
       <input
+        id="nova-tarefa"
         type="text"
         value={texto}
         onChange={e => setTexto(e.target.value)}
         placeholder="Nova tarefa"
         style={{ flex: 1 }}
+        aria-label="Nova tarefa"
+        required
       />
-      <button type="submit">Adicionar</button>
+      <button type="submit" aria-label="Adicionar tarefa">Adicionar</button>
     </form>
   );
 };

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1765985996211" clover="3.2.0">
+  <project timestamp="1765985996212" name="All files">
+    <metrics statements="57" coveredstatements="39" conditionals="10" coveredconditionals="5" methods="14" coveredmethods="11" elements="81" coveredelements="55" complexity="0" loc="57" ncloc="57" packages="5" files="6" classes="6"/>
+    <package name="src">
+      <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="1"/>
+      <file name="App.tsx" path="/workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/packages/web/src/App.tsx">
+        <metrics statements="8" coveredstatements="7" conditionals="4" coveredconditionals="3" methods="2" coveredmethods="1"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.atoms">
+      <metrics statements="4" coveredstatements="4" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="Button.tsx" path="/workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/packages/web/src/components/atoms/Button.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="5" type="cond" truecount="2" falsecount="0"/>
+      </file>
+      <file name="Input.tsx" path="/workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/packages/web/src/components/atoms/Input.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.molecules">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="UserForm.tsx" path="/workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/packages/web/src/components/molecules/UserForm.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="2" count="2" type="stmt"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.organisms">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <file name="UserList.tsx" path="/workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/packages/web/src/components/organisms/UserList.tsx">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.hooks">
+      <metrics statements="36" coveredstatements="19" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="3"/>
+      <file name="useUsers.ts" path="/workspaces/curso_typescript/curso_typescript/projetos/fullstack_monorepo/packages/web/src/hooks/useUsers.ts">
+        <metrics statements="36" coveredstatements="19" conditionals="4" coveredconditionals="0" methods="5" coveredmethods="3"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="2" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="38" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

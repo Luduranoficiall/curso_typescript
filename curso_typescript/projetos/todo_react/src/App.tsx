@@ -1,35 +1,32 @@
 import React, { useState } from 'react';
-import { Todo } from '../types/Todo';
+import { useTodos } from './hooks/useTodos';
+import { Todo } from './types/Todo';
 import TodoForm from './components/TodoForm';
 import TodoList from './components/TodoList';
 
 const App: React.FC = () => {
-  const [todos, setTodos] = useState<Todo[]>([]);
-  const [filtro, setFiltro] = useState<'todas' | 'concluidas' | 'pendentes'>('todas');
-
-  const adicionarTodo = (texto: string) => {
-    if (!texto.trim()) return;
-    setTodos([...todos, { id: Date.now(), texto, concluido: false }]);
-  };
-
-  const alternarTodo = (id: number) => {
-    setTodos(todos.map(todo => todo.id === id ? { ...todo, concluido: !todo.concluido } : todo));
-  };
-
-  const removerTodo = (id: number) => {
-    setTodos(todos.filter(todo => todo.id !== id));
-  };
-
-  const filtrarTodos = () => {
-    if (filtro === 'concluidas') return todos.filter(t => t.concluido);
-    if (filtro === 'pendentes') return todos.filter(t => !t.concluido);
-    return todos;
-  };
+  const {
+    todos,
+    erro,
+    filtro,
+    setFiltro,
+    adicionarTodo,
+    alternarTodo,
+    removerTodo,
+    filtrarTodos,
+    loading,
+  } = useTodos?.() ?? {};
 
   return (
     <div style={{ maxWidth: 400, margin: '40px auto', fontFamily: 'sans-serif' }}>
       <h1>Todo App</h1>
       <TodoForm adicionarTodo={adicionarTodo} />
+      {erro && (
+        <div style={{ color: 'red', margin: '8px 0' }} role="alert" aria-live="assertive">{erro}</div>
+      )}
+      {loading && (
+        <div style={{ color: '#555', margin: '8px 0' }} aria-live="polite">Carregando tarefas...</div>
+      )}
       <div style={{ margin: '10px 0' }}>
         <button onClick={() => setFiltro('todas')}>Todas</button>
         <button onClick={() => setFiltro('concluidas')}>Concluídas</button>

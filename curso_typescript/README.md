@@ -1,6 +1,7 @@
+
 # Curso Completo de TypeScript
 
-Este curso é baseado no repositório [matheusbattisti/curso_typescript](https://github.com/matheusbattisti/curso_typescript) e foi expandido para cobrir do básico ao avançado, com exemplos práticos e exercícios.
+Este curso cobre do básico ao avançado, com exemplos práticos, projetos reais e exercícios inéditos. Todo o conteúdo foi cuidadosamente estruturado para proporcionar a melhor experiência de aprendizado e prática profissional em TypeScript.
 
 ## Sumário
 
