@@ -1,9 +1,19 @@
-import React from 'react';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+import * as React from 'react';
+import type { ReactNode, ButtonHTMLAttributes, ForwardedRef } from 'react';
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   label: string;
+  children?: ReactNode;
 }
 
-export const Button: React.FC<ButtonProps> = ({ label, ...props }) => (
-  <button aria-label={label} {...props}>{props.children || label}</button>
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ label, children, ...props }, ref: ForwardedRef<HTMLButtonElement>): React.ReactElement => (
+    <button ref={ref} aria-label={label} {...props}>
+      {children ?? label}
+    </button>
+  )
 );
+Button.displayName = 'Button';
+export { Button };
+export default Button;

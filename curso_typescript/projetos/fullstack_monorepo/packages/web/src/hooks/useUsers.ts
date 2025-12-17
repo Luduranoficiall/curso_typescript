@@ -1,6 +1,8 @@
 
 import { useEffect, useState } from 'react';
 import { User } from '../../../types/User';
+import CryptoJS from 'crypto-js';
+const SECRET = 'curso_typescript_superseguro';
 
 export function useUsers() {
   const [users, setUsers] = useState<User[]>([]);
@@ -15,7 +17,12 @@ export function useUsers() {
       try {
         const res = await fetch('http://localhost:4000/api/users');
         const data = (await res.json()) as User[];
-        setUsers(data);
+        // Descriptografa no frontend (ponta a ponta)
+        setUsers(data.map(u => ({
+          ...u,
+          nome: CryptoJS.AES.decrypt(u.nome, SECRET).toString(CryptoJS.enc.Utf8) || u.nome,
+          email: CryptoJS.AES.decrypt(u.email, SECRET).toString(CryptoJS.enc.Utf8) || u.email
+        })));
       } catch {
         setErro('Erro ao carregar usuários.');
       } finally {
@@ -41,10 +48,13 @@ export function useUsers() {
     }
     setErro(null);
     setLoading(true);
+    // Criptografa antes de enviar
+    const nomeCripto = CryptoJS.AES.encrypt(nome, SECRET).toString();
+    const emailCripto = CryptoJS.AES.encrypt(email, SECRET).toString();
     const res = await fetch('http://localhost:4000/api/users', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nome, email })
+      body: JSON.stringify({ nome: nomeCripto, email: emailCripto })
     });
     const novo = (await res.json()) as User;
     setUsers([...users, novo]);

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+cd curso_typescript/projetos/fullstack_monorepo/packages/web && npm run lint && npm test && cd -
+npx lint-staged

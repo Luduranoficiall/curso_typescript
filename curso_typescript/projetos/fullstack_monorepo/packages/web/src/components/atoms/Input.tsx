@@ -1,12 +1,20 @@
-import React from 'react';
 
-interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
+import * as React from 'react';
+import type { InputHTMLAttributes, ForwardedRef } from 'react';
+
+export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;
+  id?: string;
 }
 
-export const Input: React.FC<InputProps> = ({ label, ...props }) => (
-  <>
-    <label htmlFor={props.id} style={{ display: 'none' }}>{label}</label>
-    <input aria-label={label} {...props} />
-  </>
+const Input = React.forwardRef<HTMLInputElement, InputProps>(
+  ({ label, id, ...props }, ref: ForwardedRef<HTMLInputElement>): React.ReactElement => (
+    <>
+      <label htmlFor={id} style={{ display: 'none' }}>{label}</label>
+      <input ref={ref} id={id} aria-label={label} {...props} />
+    </>
+  )
 );
+Input.displayName = 'Input';
+export { Input };
+export default Input;

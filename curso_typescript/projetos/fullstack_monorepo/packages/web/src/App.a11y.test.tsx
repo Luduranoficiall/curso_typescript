@@ -1,6 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { axe, toHaveNoViolations } from 'jest-axe';
+
+// Declaração global para compatibilidade TypeScript
+declare const global: typeof globalThis;
 import App from './App';
 
 expect.extend(toHaveNoViolations);
