@@ -2,7 +2,7 @@
 
 # Curso TypeScript Especialista Premium Ouro
 
-🚀 Desenvolvido por [Luduran Oficial](https://www.luduranoficiall.com/) — acesse o site para mais conteúdos, dicas e novidades!
+🚀 Site do autor: https://www.luduranoficiall.com/ — acesse para mais conteúdos, dicas e novidades!
 
 ## Do Básico ao Especialista: Segurança, Performance e Carreira
 
