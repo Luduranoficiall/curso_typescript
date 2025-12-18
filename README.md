@@ -7,6 +7,68 @@ Esta aplicação e curso vão além do básico: você terá criptografia ponta-a
 
 ---
 
+## Como rodar o projeto
+
+1. Clone o repositório e acesse a pasta raiz:
+	```sh
+	git clone https://github.com/Luduranoficiall/curso_typescript.git
+	cd curso_typescript
+	```
+2. Instale as dependências principais e dos subprojetos:
+	```sh
+	npm install
+	cd curso_typescript/projetos/fullstack_monorepo/packages/types && npm install && npm run build
+	cd ../api && npm install && npm run build
+	cd ../web && npm install && npm run build
+	```
+3. Para rodar a API:
+	```sh
+	cd curso_typescript/projetos/fullstack_monorepo/packages/api
+	npm run dev
+	```
+4. Para rodar o frontend:
+	```sh
+	cd curso_typescript/projetos/fullstack_monorepo/packages/web
+	npm start
+	```
+
+## Testes, Lint e Cobertura
+
+- Para rodar o lint:
+  ```sh
+  npm run lint --if-present
+  ```
+- Para rodar os testes:
+  ```sh
+  npm test --if-present
+  ```
+- Para gerar cobertura:
+  ```sh
+  npm run coverage --if-present
+  ```
+
+## Integração Contínua (CI/CD)
+
+O projeto utiliza GitHub Actions para rodar lint, testes e builds automaticamente a cada push ou pull request na branch main. O workflow está em `.github/workflows/ci.yml`.
+
+## Estrutura dos subprojetos
+
+- [Monorepo Fullstack (API, Web, Types)](curso_typescript/projetos/fullstack_monorepo/README.md)
+- [API (Express)](curso_typescript/projetos/fullstack_monorepo/packages/api/README.md)
+- [Web (React)](curso_typescript/projetos/fullstack_monorepo/packages/web/README.md)
+- [Types (compartilhados)](curso_typescript/projetos/fullstack_monorepo/packages/types/README.md)
+
+---
+
+## Como contribuir
+
+1. Faça um fork do projeto e crie uma branch para sua feature ou correção.
+2. Siga o padrão de commits (commitlint) e mantenha o código formatado (Prettier).
+3. Rode os testes e o lint antes de abrir um Pull Request.
+4. Descreva claramente sua contribuição no PR.
+
+---
+
 ## Sumário Premium
 
 - [x] Fundamentos e tipos avançados de TypeScript
