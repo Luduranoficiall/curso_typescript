@@ -10,7 +10,8 @@ export interface UserListProps {
   users: User[];
 }
 
-const UserList: React.FC<UserListProps> = ({ users }) => (
+
+const UserList: React.FC<UserListProps> = React.memo(({ users }) => (
   <ul aria-live="polite">
     {users.map(u => (
       <li key={u.id} style={{ background: '#f8f8f8', margin: '4px 0', padding: 4, borderRadius: 4 }}>
@@ -18,6 +19,6 @@ const UserList: React.FC<UserListProps> = ({ users }) => (
       </li>
     ))}
   </ul>
-);
+));
 export { UserList };
 export default UserList;

@@ -23,7 +23,7 @@ const getGenAI = () => {
   return null;
 };
 
-export const GeminiChat: React.FC = () => {
+const GeminiChat: React.FC = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
@@ -46,7 +46,7 @@ export const GeminiChat: React.FC = () => {
   };
 
   return (
-    <div style={{ maxWidth: 500, margin: "2rem auto", padding: 24, border: "1px solid #eee", borderRadius: 8 }}>
+    <div data-testid="mock-gemini" style={{ maxWidth: 500, margin: "2rem auto", padding: 24, border: "1px solid #eee", borderRadius: 8 }}>
       <h2>Chat Gemini 3.0 Pro</h2>
       <div style={{ minHeight: 120, marginBottom: 16 }}>
         {messages.map((msg, i) => (
@@ -67,3 +67,4 @@ export const GeminiChat: React.FC = () => {
     </div>
   );
 };
+export default GeminiChat;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Todo } from '../types/Todo';
 
 type Props = {
@@ -8,7 +8,7 @@ type Props = {
 };
 
 
-const TodoList: React.FC<Props> = ({ todos, alternarTodo, removerTodo }) => (
+const TodoList: React.FC<Props> = memo(({ todos, alternarTodo, removerTodo }) => (
   <ul style={{ listStyle: 'none', padding: 0 }} aria-live="polite">
     {todos.length === 0 && <li>Nenhuma tarefa encontrada.</li>}
     {todos.map(todo => (
@@ -40,6 +40,6 @@ const TodoList: React.FC<Props> = ({ todos, alternarTodo, removerTodo }) => (
       </li>
     ))}
   </ul>
-);
+));
 
 export default TodoList;

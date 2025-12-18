@@ -39,7 +39,8 @@ afterAll(() => {
 });
 
 jest.mock('./components/GeminiChat', () => ({
-  GeminiChat: () => <div data-testid="mock-gemini">GeminiChat Mock</div>
+  __esModule: true,
+  default: () => <div data-testid="mock-gemini">GeminiChat Mock</div>
 }));
 
 describe('Acessibilidade (axe)', () => {

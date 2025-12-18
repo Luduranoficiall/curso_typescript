@@ -3,7 +3,8 @@ import * as React from 'react';
 import { useUsers } from './hooks/useUsers';
 import { UserForm } from './components/molecules/UserForm';
 import { UserList } from './components/organisms/UserList';
-import { GeminiChat } from './components/GeminiChat';
+
+const GeminiChat = React.lazy(() => import('./components/GeminiChat').then(module => ({ default: module.default })));
 
 const App: React.FC = () => {
   const {
@@ -38,7 +39,9 @@ const App: React.FC = () => {
           <UserList users={users} />
         </div>
         <div style={{ flex: 1, minWidth: 340 }}>
-          <GeminiChat />
+          <React.Suspense fallback={<div>Carregando chat...</div>}>
+            <GeminiChat />
+          </React.Suspense>
         </div>
       </div>
       <footer style={{ textAlign: 'center', color: '#64748b', marginTop: 48, fontSize: 14 }}>

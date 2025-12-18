@@ -10,13 +10,32 @@
     "test": "echo 'Sem testes automatizados ainda'"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^20.2.0",
     "@types/connect": "^3.4.38",
     "@types/express": "^5.0.6",
     "@types/express-serve-static-core": "^5.1.0",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.0.2",
+    "@types/supertest": "^6.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
+    "commitlint": "^20.2.0",
+    "eslint": "^9.39.2",
+    "husky": "^9.1.7",
+    "jest": "^30.2.0",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.4",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.6",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   }

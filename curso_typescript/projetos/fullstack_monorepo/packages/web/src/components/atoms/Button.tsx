@@ -7,13 +7,14 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children?: ReactNode;
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+
+const Button = React.memo(React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ label, children, ...props }, ref: ForwardedRef<HTMLButtonElement>): React.ReactElement => (
     <button ref={ref} aria-label={label} {...props}>
       {children ?? label}
     </button>
   )
-);
+));
 Button.displayName = 'Button';
 export { Button };
 export default Button;
