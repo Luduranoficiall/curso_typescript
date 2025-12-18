@@ -12,7 +12,16 @@ declare global {
   }
 }
 
-const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
+// Evita import.meta em ambiente de teste (Jest)
+// @ts-ignore
+const isTest = typeof process !== 'undefined' && process.env && process.env.JEST_WORKER_ID !== undefined;
+const getGenAI = () => {
+  if (isTest) return null;
+  if (typeof import.meta !== 'undefined' && import.meta.env && import.meta.env.VITE_GEMINI_API_KEY) {
+    return new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
+  }
+  return null;
+};
 
 export const GeminiChat: React.FC = () => {
   const [input, setInput] = useState("");
@@ -24,6 +33,8 @@ export const GeminiChat: React.FC = () => {
     setLoading(true);
     setMessages((msgs) => [...msgs, `Você: ${input}`]);
     try {
+      const genAI = getGenAI();
+      if (!genAI) throw new Error('Gemini API não configurada para este ambiente.');
       const model = genAI.getGenerativeModel({ model: "gemini-pro" });
       const result = await model.generateContent(input);
       setMessages((msgs) => [...msgs, `Gemini: ${result.response.text()}`]);

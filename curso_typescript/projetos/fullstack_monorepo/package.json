@@ -17,5 +17,8 @@
     "react-dom": "^19.2.3",
     "typescript": "^5.9.3",
     "undici-types": "^7.16.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.37.5"
   }
 }

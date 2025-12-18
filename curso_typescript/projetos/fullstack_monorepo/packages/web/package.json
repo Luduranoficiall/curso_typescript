@@ -27,7 +27,7 @@
     "@typescript-eslint/eslint-plugin": "^8.50.0",
     "@typescript-eslint/parser": "^8.50.0",
     "axe-core": "^4.11.0",
-    "eslint": "^9.39.2",
+    "eslint": "^8.56.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-react": "^7.37.5",
@@ -50,7 +50,7 @@
   "scripts": {
     "start": "npx serve -s build",
     "build": "tsc",
-    "lint": "eslint ./src --ext .ts,.tsx",
+    "lint": "eslint ./src",
     "format": "prettier --write ./src",
     "test": "jest --config=jest.config.js --passWithNoTests",
     "coverage": "jest --config=jest.config.js --coverage",

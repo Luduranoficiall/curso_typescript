@@ -38,6 +38,10 @@ afterAll(() => {
     (global as typeof globalThis & { fetch?: unknown }).fetch = undefined;
 });
 
+jest.mock('./components/GeminiChat', () => ({
+  GeminiChat: () => <div data-testid="mock-gemini">GeminiChat Mock</div>
+}));
+
 describe('Acessibilidade (axe)', () => {
   it('App não possui violações de acessibilidade básicas', async () => {
     const { container } = render(<App />);
